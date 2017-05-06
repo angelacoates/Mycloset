@@ -1,4 +1,6 @@
 class ClothingsController < ApplicationController
+  before_action :authenticate_user!
+  
   # GET /clothings
   def index
     @clothings = Clothing.all
